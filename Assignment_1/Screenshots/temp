@@ -1,1 +1,130 @@
+student@iteradmin-Vostro-3268:~$ cd Desktop
+student@iteradmin-Vostro-3268:~/Desktop$ cd 2241011233_Surbhi
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi$ mkdir DOS_2241011233
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi$ cd DOS_2241011233
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233$ mkdir DOSass1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233$ cd DOSass1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ mkdir dir1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ mkdir dir2
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ cd dir2
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir2$ cd ..
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ cd ..
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233$ cd DOSass1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ rm -r dir2
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ ls
+dir1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ cat > file1
+Surbhi Kumari,                      
+Registration No - 2241011233
+Branch - CSE
+Semester - 5th
+Section - 2241028^C
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ cat file1
+Surbhi Kumari,
+Registration No - 2241011233
+Branch - CSE
+Semester - 5th
+Section - 2241028student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1$ cd dir1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ cat > file2
+Sem 1 - 9.79
+Sem 2 - 9.61
+Sem 3 - 8.98
+Sem 4 - 8.2
+^C
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ cat file1 file2 > file3
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ mv file2 marksinfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ cat file1 > reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ ls -i file1 markinfo reginfo
+ls: cannot access 'markinfo': No such file or directory
+27008378 file1  27008383 reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ ls -i file1 marksinfo reginfo
+27008378 file1  27008377 marksinfo  27008383 reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ rm file1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ wc -l markinfo
+wc: markinfo: No such file or directory
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ wc -l marksinfo
+4 marksinfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ wc -w marksinfo
+16 marksinfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ wc -m marksinfo
+51 marksinfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ wc marksinfo
+ 4 16 51 marksinfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ cat > Personalinfo
+Name: Surbhi
+Reg no - 2241011233
+Address - Bhubaneshwar
+^C
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ tac marksinfo
+Sem 4 - 8.2
+Sem 3 - 8.98
+Sem 2 - 9.61
+Sem 1 - 9.79
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ cmp reginfo personalinfo
+cmp: personalinfo: No such file or directory
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ cmp reginfo Personalinfo
+reginfo Personalinfo differ: byte 1, line 1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ diff reginfo Personalinfo
+1,5c1,3
+< Surbhi Kumari,
+< Registration No - 2241011233
+< Branch - CSE
+< Semester - 5th
+< Section - 2241028
+\ No newline at end of file
+---
+> Name: Surbhi
+> Reg no - 2241011233
+> Address - Bhubaneshwar
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ ls -1 | wc -l
+4
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ ls -1 | grep -v 'filelist$' > filelist
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ chmod a+w reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ chmod a-w reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ chmod a+rwx reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ date; pwd
+Friday 20 September 2024 03:22:56 PM IST
+/home/student/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ date; pwd | wc - 1
+Friday 20 September 2024 03:23:13 PM IST
+      1       1      68 -
+wc: 1: No such file or directory
+      1       1      68 total
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ (date; pwd) | wc-1
+wc-1: command not found
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ (date; pwd) | wc - 1
+      2       8     109 -
+wc: 1: No such file or directory
+      2       8     109 total
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo *
+file3 filelist marksinfo Personalinfo reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo ***
+file3 filelist marksinfo Personalinfo reginfo
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo '***'
+***
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo \***
+***
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo \*\*\*
+***
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo */*
+*/*
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo Don't do this
+> ^C
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo "Don't do this" (Quotes of one kind protect quotes of other kind)
+bash: syntax error near unexpected token `('
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo Hello #world
+Hello
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo "Hello #world"
+Hello #world
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo 'Hello #world'
+Hello #world
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo date
+date
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo 'date'
+date
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo "date"
+date
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ echo `date`
+Friday 20 September 2024 03:28:18 PM IST
+student@iteradmin-Vostro-3268:~/Desktop/2241011233_Surbhi/DOS_2241011233/DOSass1/dir1$ 
 
